@@ -15,6 +15,8 @@ class Login extends Component {
   };
 
   render() {
+    const { id, password } = this.state;
+    const isInputValid = id.length > 0 && password.length > 0;
     return (
       <main className="loginContainer">
         <div className="loginInner">
@@ -22,7 +24,9 @@ class Login extends Component {
           <form className="loginForm" onChange={this.handleInput}>
             <input name="id" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
             <input name="password" type="password" placeholder="비밀번호" />
-            <button type="button">로그인</button>
+            <button className={`${isInputValid ? "active" : ""}`} type="button">
+              로그인
+            </button>
           </form>
           <a href="/">비밀번호를 잊으셨나요?</a>
         </div>

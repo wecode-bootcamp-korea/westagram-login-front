@@ -34,13 +34,18 @@
 
   .loginForm button {
     padding: 15px 0;
-    background-color: skyblue;
+    background-color: #1a73eb;
     border: none;
     border-radius: 5px;
     color: white;
     outline: none;
-    opacity: 1;
+    opacity: 0.5;
     cursor: default;
+
+    &.active {
+      opacity: 1;
+      cursor: cursor;
+    }
   }
 
   .loginInner a {
