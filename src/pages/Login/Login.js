@@ -14,6 +14,20 @@ class Login extends Component {
     });
   };
 
+  handleLogin = () => {
+    fetch("", {
+      method: "POST",
+      body: JSON.stringify({
+        email: this.state.id,
+        passwrod: this.state.password,
+      }),
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+      });
+  };
+
   render() {
     const { id, password } = this.state;
     const isInputValid = id.length > 0 && password.length > 0;
@@ -24,7 +38,7 @@ class Login extends Component {
           <form className="loginForm" onChange={this.handleInput}>
             <input name="id" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
             <input name="password" type="password" placeholder="비밀번호" />
-            <button className={`${isInputValid ? "active" : ""}`} type="button">
+            <button className={`${isInputValid ? "active" : ""}`} type="button" onClick={this.handleLogin}>
               로그인
             </button>
           </form>
