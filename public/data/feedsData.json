@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "userName": "wecode_bootcamp",
+    "userUrl": "https://www.instagram.com/wecode_bootcamp/",
+    "profileImage": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F91d39254-f496-461a-b70a-59c1e595912e%2Flogo.jpg?table=block&id=b12fcd58-3cc5-42fc-ad55-8a1898da0046&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=40&userId=a8ba8c14-7d56-4d38-ad83-7f1487a99ae0&cache=v2",
+    "feedImg": "https://wecode.co.kr/img/learningEnv/WeWork-seollung-1.jpg",
+    "likes": 171,
+    "userComment": "함께해서 위코드!",
+    "timestamp": 3
+  },
+  {
+    "id": 1,
+    "userName": "jongtaek",
+    "userUrl": "https://www.instagram.com/mido__sol/",
+    "profileImage": "https://wecode.co.kr/static/media/taeck.283abc8b.png",
+    "feedImg": "https://wecode.co.kr/img/learningEnv/WeWork-seollung-2.jpg",
+    "likes": 201,
+    "userComment": "안녕히 계세요 여러분 전 이 세상의 모든 굴레와 속박을 벗어던지고",
+    "timestamp": 2
+  },
+  {
+    "id": 2,
+    "userName": "joonsik",
+    "userUrl": "https://www.instagram.com/whoyoung90/",
+    "profileImage": "https://wecode.co.kr/static/media/yang.0aac1edb.png",
+    "feedImg": "https://wecode.co.kr/img/learningEnv/WeWork-seollung-4.jpg",
+    "likes": 56,
+    "userComment": "블라인드를 올리면 환상적인 10층의 무덤뷰!",
+    "timestamp": 5
+  }
+]

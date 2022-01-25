@@ -1,217 +1,177 @@
-body {
-  background-color: #f2f2f2;
-  margin: 0;
-}
-
-* {
-  font-family: sans-serif;
-}
-
 .main {
-  .nav {
-    padding: 30px 0;
-    border-bottom: 1px solid #d3d3d3;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 935px;
+  margin: 0 auto;
+  padding-top: 85px;
+
+  .mainFeeds {
+    margin-right: 28px;
+
+    .topFeedBox {
+      width: 616px;
+      height: 118px;
+      margin-bottom: 24px;
+      margin-top: 0;
+      padding: 16px 0;
+      border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+      border-radius: 3px;
+      background: rgba(var(--d87, 255, 255, 255), 1);
+      color: rgba(var(--f52, 142, 142, 142), 1);
+      font-size: 12px;
+
+      img {
+        width: 60px;
+        height: 60px;
+        padding: 2px;
+        border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+        border-radius: 50%;
+      }
+
+      ul {
+        display: flex;
+        margin: 0;
+        padding-left: 20px;
+        list-style: none;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          p {
+            margin-top: 8px;
+          }
+        }
+      }
+
+      li:not(:first-child) {
+        margin-left: 22px;
+      }
+    }
   }
 
-  .navInner {
-    display: flex;
-    justify-content: space-between;
-    width: 75%;
-    max-width: 1000px;
-    margin: 0 auto;
-    font-size: 30px;
-  }
+  .mainRightSide {
+    position: fixed;
+    max-width: 295px;
+    margin-left: 644px;
 
-  .titleWrapper .title {
-    display: inline-block;
-    font-family: "Pacifico", cursive;
-  }
+    .asideAccount {
+      display: flex;
+      align-items: center;
+      margin: 18px 0 10px;
 
-  .searchWrapper {
-    width: 200px;
-    padding: 7px 0;
-    border: 1px solid #d3d3d3;
-    border-radius: 3px;
-    background-color: #fafafa;
-    text-align: center;
-    font-size: 15px;
-    color: #d3d3d3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+      .asideProfile {
+        img {
+          width: 57px;
+          height: 57px;
+        }
+      }
 
-  .searchWrapper p {
-    display: inline-block;
-  }
+      .username:hover {
+        text-decoration-line: none;
+      }
+    }
 
-  /* Main */
-  .mainContainer {
-    display: grid;
-    grid-template-columns: 70% 25%;
-    grid-column-gap: 5%;
-    width: 70%;
-    max-width: 1000px;
-    margin: 70px auto 0 auto;
-    padding-bottom: 100px;
-  }
+    .profileImage {
+      border: 0.5px solid rgba(var(--b6a, 219, 219, 219), 1);
+      border-radius: 50%;
+    }
 
-  .mainContainer article {
-    background-color: white;
-  }
+    .username {
+      display: inline-block;
+      text-decoration: none;
+      margin-left: 14px;
+      color: black;
+      font-size: 14px;
+      font-weight: 600;
 
-  .feed {
-    border: 1px solid #c1c1c1;
-  }
+      &:hover {
+        text-decoration-line: underline;
+      }
+    }
 
-  .feedHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
+    .asideNickname {
+      margin-left: 14px;
+      color: rgba(var(--f52, 142, 142, 142), 1);
+    }
 
-  .feedHeader div {
-    display: flex;
-    align-items: center;
-  }
+    .asideBtnBox {
+      position: absolute;
+      right: 0;
 
-  .feedHeader div i {
-    margin-right: 10px;
-    font-size: 30px;
-  }
+      .asideBtn {
+        padding: 0;
+        background: none;
+        color: rgba(var(--d69, 0, 149, 246), 1);
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
 
-  .feedHeader div p {
-    display: inline-block;
-    font-weight: bold;
-    line-height: 11px;
-  }
+    .recommendComments {
+      display: flex;
+      margin-top: 20px;
+      font-weight: 600;
+      color: rgba(var(--f52, 142, 142, 142), 1);
 
-  .feedImg {
-    height: 600px;
-    background-image: url("/images/soccer.jpg");
-    background-size: cover;
-    background-position: center;
-  }
+      .asideBtn {
+        color: black;
+      }
+    }
 
-  .commentWrapper {
-    padding: 15px 20px;
-  }
+    .recommendContainer {
+      margin-bottom: 20px;
+      padding: 8px 0;
 
-  .commentIconWrapper {
-    display: flex;
-    justify-content: space-between;
-    font-size: 25px;
-  }
+      .recommendInfo {
+        display: flex;
+        align-items: center;
+        padding: 6px 0;
 
-  .commentIconWrapper .fa-heart {
-    color: red;
-  }
+        .recommend {
+          width: 33px;
+          height: 33px;
+        }
 
-  .commentLike {
-    display: flex;
-    margin: 15px 0;
-  }
+        .asideNickname {
+          font-size: 12px;
+        }
+      }
+    }
 
-  .commentLike p {
-    margin-left: 10px;
-    line-height: 18px;
-  }
+    .asidePolicies {
+      color: rgba(var(--edc, 199, 199, 199), 1);
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 13px;
 
-  #commentLists {
-    font-size: 14px;
-  }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 3px 0;
+        line-height: 18px;
+      }
 
-  #commentLists li {
-    margin-bottom: 8px;
-  }
+      li {
+        margin: 0;
+      }
 
-  .commentWrapper .name {
-    margin-right: 10px;
-    font-weight: bold;
-  }
+      p {
+        margin-top: 16px;
+      }
 
-  .commentWrapper .delete {
-    float: right;
-    cursor: pointer;
-  }
+      .moreInfo a,
+      .moreInfo span {
+        color: rgba(var(--edc, 199, 199, 199), 1);
+        text-decoration: none;
+      }
 
-  .comment {
-    padding: 15px 20px;
-    border-top: 1px solid #c1c1c1;
-  }
-
-  .comment input {
-    width: 400px;
-    border: none;
-    font-size: 16px;
-    outline: none;
-  }
-
-  #submit {
-    float: right;
-    border: none;
-    background-color: white;
-    font-size: 18px;
-    color: skyblue;
-    outline: none;
-    cursor: pointer;
-  }
-
-  /* Aside bar */
-  .mainContainer aside {
-    height: 300px;
-    font-size: 15px;
-    font-weight: bold;
-  }
-
-  /* Account */
-  .sectionWrapper {
-    display: flex;
-  }
-
-  .sectionWrapper i {
-    margin-right: 10px;
-    font-size: 40px;
-  }
-
-  .sectionInner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .sectionInner p:last-child {
-    color: #c1c1c1;
-  }
-
-  /* Content */
-  .contentWrapper {
-    margin: 20px 0;
-    padding: 15px 20px 0 20px;
-    height: 250px;
-    border: 1px solid #c1c1c1;
-    background-color: white;
-    overflow: auto;
-  }
-
-  .contentWrapper::-webkit-scrollbar {
-    display: none;
-  }
-
-  .contentHeader {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .contentHeader p:first-child {
-    color: #c1c1c1;
-  }
-
-  .contentWrapper .sectionWrapper {
-    margin-bottom: 20px;
+      .moreInfo:not(:last-of-type)::after {
+        content: "\00B7";
+        margin: 0 2.75px;
+      }
+    }
   }
 }

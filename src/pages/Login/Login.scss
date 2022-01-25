@@ -1,59 +1,80 @@
-.loginContainer {
+.login {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  height: 100%;
 
-  .loginInner {
-    padding: 50px;
-    border: 1px solid grey;
+  .wrapper {
+    padding: 32px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    background-color: #ffffff;
     text-align: center;
-    background-color: white;
-  }
 
-  .loginInner h1 {
-    font-family: "Pacifico", cursive;
-    font-size: 50px;
-  }
-
-  .loginForm {
-    display: flex;
-    flex-direction: column;
-    margin: 80px 0 50px 0;
-    font-size: 15px;
-  }
-
-  .loginForm input {
-    width: 350px;
-    margin-bottom: 10px;
-    padding: 10px 0 10px 10px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    background-color: #fafafa;
-    outline: none;
-  }
-
-  .loginForm button {
-    padding: 15px 0;
-    background-color: #1a73eb;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    outline: none;
-    opacity: 0.5;
-    cursor: default;
-
-    &.active {
-      opacity: 1;
-      cursor: cursor;
+    .logo {
+      width: 175px;
+      height: 51px;
+      margin: 22px auto 12px;
+      font-size: 36px;
+      font-weight: 500;
+      font-family: "Lobster", cursive;
     }
-  }
 
-  .loginInner a {
-    color: darkblue;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    opacity: 0.7;
+    .loginBox {
+      width: 350px;
+      margin: 25px 0;
+
+      .textBox {
+        max-width: 266px;
+        width: 100%;
+        margin: 0 auto 7px;
+        padding: 0;
+        background-color: #fafafa;
+        border: 1px solid #dbdbdb;
+        border-radius: 3px;
+      }
+
+      .loginInput {
+        max-width: 266px;
+        width: 100%;
+        left: 8px;
+        margin: 0;
+        padding: 10px 8px;
+        border: 0;
+        font-size: 12px;
+        outline: none;
+
+        &::placeholder {
+          color: #8e8e8e;
+        }
+      }
+
+      .loginBtn {
+        max-width: 266px;
+        width: 100%;
+        margin: 8px auto;
+        padding: 9px;
+        color: #ffffff;
+        background-color: #0095f6;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+
+        &.disabled {
+          background-color: #b2dffc;
+          cursor: default;
+        }
+      }
+    }
+
+    span {
+      margin: 60px 0 15px;
+
+      a {
+        color: #00376b;
+        font-size: 12px;
+        text-decoration-line: none;
+      }
+    }
   }
 }
